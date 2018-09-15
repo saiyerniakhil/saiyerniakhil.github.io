@@ -1,76 +1,200 @@
-#contact{
-  height: 100vh;
-  background-color:#f8ffb2;
-}
-#welcome-section {
-	  height: 100vh;
-/*     border: 1px solid black; */
-    margin-top: 40px;
-    background-color:#FFBAB2;
-}
-h1{
-  margin: auto;
-  padding: 50px 0;
-}
-#projects{
-  height: 760px;
-  background-color:#ffe0b2;
-  margin-top: -20px;
-}
-#tiles-group{
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
   display: flex;
-  flex-wrap: wrap;
-}
-.project-tile{
-  width: 300px;
-  height: 380px;
   justify-content: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin-left: 2px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
 }
-.project-tile:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+/*end of type writer effect*/
+.typewriter {
+  margin-top: 100px;
 }
-.project-tile p {
-    padding: 2px 16px;
-}
-.project-tile h3 , a{
-    padding: 2px 16px;
-}
-#contact{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-table{
-  margin-left: auto;
-  margin-right: auto;
-}
-.getin{
-  border-left: 5px solid #4a4c35;
-}
-.button{
-  margin-left: 20px;
-}
-svg{
-  height: 400px;
-  width: 400px;
-  margin: auto;
-}
-#welcome-heading{
-  font-family: 'Alfa Slab One', cursive;
+.typewriter h1 {
+  color: #000;
+  font-family: monospace;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
 
-@media (max-width: 800px) {
-  #projects{
-    height: 1140px;
-    margin-top: -20px;
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
   }
-  #contact {
-    flex-wrap: nowrap;
-    flex-direction: column;
+
+  to {
+    width: 100%
   }
 }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange
+  }
+}
+/*end of type writer effect*/
+ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+}
+
+ul li {
+  list-style: none;
+  margin: 0 40px;
+
+}
+
+ul li .fa {
+  font-size: 40px;
+  color: #262626;
+  line-height: 80px;
+  transition: .5s;
+
+}
+
+ul li a {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  transform: perspective(100px) rotate(-30deg) skew(25deg) translate(0, 0);
+  transition: .5s;
+  box-shadow: -20px 20px 10px rgb(0, 0, 0, 0.5);
+}
+
+ul li a::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transition: .5s;
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+ul li a::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: -11px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transition: .5s;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+ul li a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+}
+
+ul li:hover .fa {
+  color: #fff;
+}
+
+ul li a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+}
+
+ul li:hover:nth-child(1) a {
+  background: #3b5999;
+}
+
+ul li:hover:nth-child(1) a:before {
+  background: #2e4a86;
+}
+
+ul li:hover:nth-child(1) a:after {
+  background: #4a69ad;
+}
+
+ul li:hover:nth-child(2) a {
+  background: #121111;
+}
+
+ul li:hover:nth-child(2) a:before {
+  background: #171515;
+}
+
+ul li:hover:nth-child(2) a:after {
+  background: #000000;
+}
+
+ul li:hover:nth-child(3) a {
+  background: #00ab6c;
+}
+
+ul li:hover:nth-child(3) a:before {
+  background: #04A469;
+}
+
+ul li:hover:nth-child(3) a:after {
+  background: #04A469;
+}
+
+ul li:hover:nth-child(4) a {
+  background: #0077B5;
+}
+
+ul li:hover:nth-child(4) a:before {
+  background: #036aa0;
+}
+
+ul li:hover:nth-child(4) a:after {
+  background: #0d82bf;
+}
+
+ul li:hover:nth-child(5) a {
+  background: #e4405f;
+}
+
+ul li:hover:nth-child(5) a:before {
+  background: #d02d4c;
+}
+
+ul li:hover:nth-child(5) a:after {
+  background: #f1395c;
+}
+
+/*Footer Start*/
+
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+  background: #999;
+}
+
+/*Footer End*/
