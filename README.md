@@ -1,3 +1,3 @@
 # saiyerniakhil.github.io
 My Portfolio
-## visit www.saiyerniakhil.ml to see this live ##
+## visit https://saiyerniakhil.netlify.com to see this live
